@@ -29,3 +29,4 @@ class ReservationsController < ApplicationController
   def reservation_params
     params.require(:user_id).permit(:status)
 end
+end
