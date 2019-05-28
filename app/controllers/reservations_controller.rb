@@ -20,13 +20,18 @@ class ReservationsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
   def update
   end
 
   def delete
   end
 
+  private
+
   def reservation_params
-    params.require(:user_id).permit(:status)
-end
+    params.require(:user).permit(:user_id)
+  end
 end

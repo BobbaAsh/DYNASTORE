@@ -1,6 +1,9 @@
-<h1>Reservations</h1>
-<p>
+<h1>Your Reservations !</h1>
+<ul>
   <% @reservations.each do |reservation|%>
-  <%= reservation.status %>
+  <li><%= reservation.status %></li>
   <% end %>
-</p>
+</ul>
+<%= link_to "back", root_path %>
+<%= link_to "Create", reservations_new_path %>
+
