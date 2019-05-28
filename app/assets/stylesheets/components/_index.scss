@@ -2,3 +2,24 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+
+.text-center {
+  font-family: 'Alfa Slab One', cursive;
+  letter-spacing: 2px;
+}
+
+.row {
+  justify-content: center;
+  display: flex;
+  background-color: white;
+  padding: 30px;
+}
+
+.typo {
+  font-family: 'Alfa Slab One', cursive;
+  letter-spacing: 10px;
+}
+
+.label {
+  margin-bottom: 5px;
+}
