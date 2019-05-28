@@ -12,12 +12,15 @@ class ReservationsController < ApplicationController
   end
 
   def create
-  #   @reservation = Reservation.new
-  #   if @reservation.save
-  #     redirect_to reservation_path(@reservation)
-  #   else
-  #     render :new
-  #   end
+    @reservation = Reservation.new(reservation_params)
+    if @reservation.save
+      redirect_to reservation_path(@reservation.id)
+    else
+      render :new
+    end
+  end
+
+  def edit
   end
 
   def update
@@ -26,6 +29,9 @@ class ReservationsController < ApplicationController
   def delete
   end
 
+  private
+
   def reservation_params
-    params.require(:user_id).permit(:status)
+    params.require(:user).permit(:user_id)
+  end
 end

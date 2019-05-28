@@ -4,12 +4,12 @@ Rails.application.routes.draw do
   get 'reservations/:id', to: "reservations#show"
   post 'reservations', to: "reservations#create"
 
-#   get 'reservations/update'
-#   get 'reservations/delete'
-#   devise_for :users
-#   root to: 'pages#home'
-#     resources :users
-#     resources :artists do
-#     resources :reservations
-# end
+  get 'reservations/update'
+  get 'reservations/delete'
+  devise_for :users
+  root to: 'pages#home'
+    resources :users
+    resources :artists do
+    resources :reservations
+  end
 end
