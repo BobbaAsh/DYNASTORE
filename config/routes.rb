@@ -21,7 +21,6 @@ Rails.application.routes.draw do
  get 'reservations/delete'
  devise_for :users
  root to: 'pages#home'
-  resources :users
   resources :artists do
   resources :reservations
  end
