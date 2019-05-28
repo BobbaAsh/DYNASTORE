@@ -12,12 +12,12 @@ class ReservationsController < ApplicationController
   end
 
   def create
-  #   @reservation = Reservation.new
-  #   if @reservation.save
-  #     redirect_to reservation_path(@reservation)
-  #   else
-  #     render :new
-  #   end
+    @reservation = Reservation.new
+    if @reservation.save
+      redirect_to reservation_path(@reservation.id)
+    else
+      render :new
+    end
   end
 
   def update
