@@ -7,9 +7,9 @@ Rails.application.routes.draw do
 #   get 'reservations/update'
 #   get 'reservations/delete'
 #   devise_for :users
-#   root to: 'pages#home'
-#     resources :users
-#     resources :artists do
-#     resources :reservations
-# end
+  root to: 'pages#home'
+    resources :users
+    resources :artists do
+    resources :reservations
+end
 end
