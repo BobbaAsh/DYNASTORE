@@ -1,8 +1,8 @@
 <div class="container padded">
   <h1 class="text-center">Add a new artist</h1>
   <div class="row">
-   <div class="card">
-    <div class="card-body">
+   <div class="artist-cards">
+    <div class="artist-card-body">
         <%= simple_form_for @artist do |f| %>
           <div class="label">Name</div>
           <div class="typo"> <%= f.input :name, label: false %> </div>

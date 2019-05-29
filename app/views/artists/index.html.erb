@@ -7,8 +7,8 @@
               <div class="card-body">
                 <h2 class="card-text"> <%= artist.name %></h2>
                 <p class="card-text"> <%= artist.genre %></p>
-                <p class="card-text"> <%= artist.price %></p>
-                <%= link_to "Details", artist_path(artist), class: "card-link" %>
+                <h3 class="card-text"> <%= artist.price %> €</h3>
+                <%= link_to "Details", artist_path(artist), class: "btn btn-info" %>
               </div>
             </div>
           <% end %>
