@@ -1,18 +1,18 @@
 <div class="container">
   <h1 class="text-center">Artists</h1>
-    <div class="cards">
-        <% @artists.each do |artist| %>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://image.noelshack.com/fichiers/2019/22/3/1559119688-49708652-10218164677132605-3402210991511961600-n.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h2 class="card-text"> <%= artist.name %></h2>
-              <p class="card-text"> <%= artist.genre %></p>
-              <p class="card-text"> <%= artist.price %></p>
-              <%= link_to "Details", artist_path(artist), class: "card-link" %>
+      <div class="cards">
+          <% @artists.each do |artist| %>
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="https://image.noelshack.com/fichiers/2019/22/3/1559119688-49708652-10218164677132605-3402210991511961600-n.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h2 class="card-text"> <%= artist.name %></h2>
+                <p class="card-text"> <%= artist.genre %></p>
+                <p class="card-text"> <%= artist.price %></p>
+                <%= link_to "Details", artist_path(artist), class: "card-link" %>
+              </div>
             </div>
-          </div>
-        <% end %>
-    </div>
+          <% end %>
+      </div>
   </div>
 </div>
 
