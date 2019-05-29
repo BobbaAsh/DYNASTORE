@@ -13,7 +13,8 @@
             <div class="label">Price</div>
             <div class="typo"> <%= f.input :price, label: false %> </div>
             <div class="label">Photo URL</div>
-            <div class="typo"> <%= f.input :photo, label: false %> </div>
+            <%= f.input :photo %>
+            <%= f.input :photo_cache, as: :hidden %>
             <%= f.submit "Submit", class: "btn btn-info" %>
           <% end %>
           <div class="pad20">
