@@ -1,24 +1,25 @@
 <div class="container padded">
-  <h1 class="text-center">Add a new artist</h1>
-  <div class="row">
-   <div class="artist-cards">
-    <div class="artist-card-body">
-        <%= simple_form_for @artist do |f| %>
-          <div class="label">Name</div>
-          <div class="typo"> <%= f.input :name, label: false %> </div>
-          <div class="label">Description</div>
-          <div class="typo"> <%= f.input :description, label: false %> </div>
-          <div class="label">Genre</div>
-          <div class="typo"> <%= f.input :genre, label: false %> </div>
-          <div class="label">Price</div>
-          <div class="typo"> <%= f.input :price, label: false %> </div>
-          <div class="label">Photo URL</div>
-          <%= f.input :photo %>
-          <%= f.input :photo_cache, as: :hidden %>
-          <%= f.submit "Submit", class: "btn btn-info" %>
-        <% end %>
-        <div class="pad20">
+  <h1 class="artist-text-center">Add a new artist</h1>
+    <div class="row">
+      <div class="col-lg-8 artist-cards">
+        <div class="artist-card-body">
+          <%= simple_form_for @artist do |f| %>
+            <div class="label">Name</div>
+            <div class="typo"> <%= f.input :name, label: false %> </div>
+            <div class="label">Description</div>
+            <div class="typo"> <%= f.input :description, label: false %> </div>
+            <div class="label">Genre</div>
+            <div class="typo"> <%= f.input :genre, label: false %> </div>
+            <div class="label">Price</div>
+            <div class="typo"> <%= f.input :price, label: false %> </div>
+            <div class="label">Photo URL</div>
+            <%= f.input :photo %>
+            <%= f.input :photo_cache, as: :hidden %>
+            <%= f.submit "Submit", class: "btn btn-info" %>
+          <% end %>
+          <div class="pad20">
         </div>
+      </div>
     </div>
   </div>
 </div>

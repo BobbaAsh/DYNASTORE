@@ -1,53 +1,45 @@
-<div class="container pad20 " style="width:60%" >
 
+<div class="container pad20" style="width:60%; margin-top: 30px; margin-bottom: 30px;" >
   <div class="row ">
-  <div class="col-lg-4 ">
-   <%= cl_image_tag @artist.photo, class: "rounded-circle" %>
-</div>
-<div class="col-lg-8 text-center" style="margin-top:50px">
+    <div class="col-lg-4 ">
+      <p class="text-underline"> <%= cl_image_tag @artist.photo, class: "rounded-circle" %>
+      </p>
+    </div>
+  <div class="col-lg-8 text-center" style="margin-top:50px">
   <h1><%= @artist.name %> </h1>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <p class="text-underline"> <%= "Genre musical: #{@artist.genre}" %> </p>
+      <p class="text-underline"> <%= "Description: #{@artist.description}" %> </p>
+    </div>
+      <div class="col-lg-4 ">
+        <div style=" border: 1px solid black ; padding:10px ; width:100%; height:100%; border-radius: 3px; padding-right: 20px; padding-left: 20px; font-size: 10px;">
+          <h5 class="text-center" style="font-weight: bold; letter-spacing: 2px;">Reservation</h5>
+            <form>
+              <div class="form-group">
+                <label for="date debut">Date de debut</label>
+                <input type="date" class="form-control"  aria-describedby="dateDebutHelp" placeholder="Enter date de debut">
+                <small  class="form-text text-muted"></small>
+              </div>
+              <div class="form-group">
+                <label for="date fin">Date de fin</label>
+                <input type="date" class="form-control"  aria-describedby="dateFinHelp" placeholder="Enter date de fin">
+                <small  class="form-text text-muted"></small>
+
+               <p class="text-underline" style="font-size: 15px; font-weight: bold;"> <%= "Prix: #{@artist.price}€" %> </p>
+             <button type="submit" class="btn btn-info btn-lg btn-block"> Book</button>
+            </form>
+        </div>
+    </div>
+  </div>
 </div>
 </div>
 
 <div class="row">
-<div class="col-lg-8">
-  <p class="text-underline"> <%= "Genre musical: #{@artist.genre}" %> </p>
-  <p class="text-underline"> <%= "Description: #{@artist.description}" %> </p>
-
-</div>
-<div class="col-lg-4 ">
-  <div style=" border: 1px solid lightgrey ; padding:10px ; width:100%; height:100%">
-    <h2 class="text-center">  Reservation</h2>
-    <p> <form>
-  <div class="form-group">
-    <label for="date debut">Date de debut</label>
-    <input type="date" class="form-control"  aria-describedby="dateDebutHelp" placeholder="Enter date de debut">
-    <small  class="form-text text-muted"></small>
-  </div>
-  <div class="form-group">
-    <label for="date fin">Date de fin</label>
-    <input type="date" class="form-control"  aria-describedby="dateFinHelp" placeholder="Enter date de fin">
-    <small  class="form-text text-muted"></small>
-
-   <p class="text-underline" style="font-size: 30px"> <%= " Prix : #{@artist.price} €" %> </p>
- <button type="submit" class="btn btn-success btn-lg btn-block"> Book</button>
-</form>
-</p>
-</div>
-
-  </div>
-
+  <%= link_to "Back", artists_path, class: "btn btn-info" %>
 </div>
 
 
-
-  <div class="row">
-  <p class="text-left"> <%= link_to "back", artists_path %> </p>
-
-</div>
-</div>
-
-
-
-
-</div>

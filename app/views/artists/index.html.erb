@@ -1,6 +1,10 @@
 <div class="container">
-  <h1 class="text-center">Artists</h1>
-      <div class="cards">
+  <h1 class="artist-text-center">Artists</h1>
+<form class="form-inline">
+  <i class="fas fa-search" aria-hidden="true"></i>
+  <input class="form-control form-control-sm ml-3 w-80" type="text" placeholder="Search" aria-label="Search">
+</form>
+          <div class="col-lg-12 cards">
           <% @artists.each do |artist| %>
             <div class="card" style="width: 18rem;">
               <img class="card-img-top" src="https://image.noelshack.com/fichiers/2019/22/3/1559119688-49708652-10218164677132605-3402210991511961600-n.jpg" alt="Card image cap">
