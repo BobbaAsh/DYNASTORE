@@ -2,7 +2,7 @@
 <div class="container pad20" style="width:60%; margin-top: 30px; margin-bottom: 30px;" >
   <div class="row ">
     <div class="col-lg-4 ">
-      <p class="text-underline"> <%= cl_image_tag @artist.photo, class: "rounded-circle" %>
+      <p class="text-underline"> <%= cl_image_tag @artist.photo, height: 300, width: 300, crop: :fill , class: "rounded-circle" %>
       </p>
     </div>
   <div class="col-lg-8 text-center" style="margin-top:50px">
