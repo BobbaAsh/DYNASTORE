@@ -1,24 +1,28 @@
-.cards {
+.home-cards {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
     margin-top: 30px;
+
 }
 
-.card {
+.home-card {
     width: 200px;
     border-radius: 3px;
-    box-shadow: 0 0 5px rgb(230,230,230);
+    box-shadow: 0 0 2px rgb(230,230,230);
     text-align: center;
     padding: 20px;
-    border: 1px solid #b2eaff;
+    border: 3px solid #b2eaff;
+    background-color: white;
+    margin-top: 70px;
 }
 
-.card img {
-    height: 100px;
+.home-card img {
+    height: 60px;
+    margin-bottom: 20px;
 }
 
-.card p {
+.home-card p {
     opacity: .5;
     margin-top: 30px;
 }
