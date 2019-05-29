@@ -3,8 +3,9 @@
 @import "avatar";
 @import "navbar";
 @import "banner";
-@import "card";
+@import "home-card";
 @import "footer";
+@import "parallax";
 
 .text-center {
   font-family: 'Alfa Slab One', cursive;
@@ -26,3 +27,5 @@
 .label {
   margin-bottom: 5px;
 }
+
+
