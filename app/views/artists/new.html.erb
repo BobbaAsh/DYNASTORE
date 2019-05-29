@@ -1,7 +1,8 @@
 <div class="container padded">
   <h1 class="text-center">Add a new artist</h1>
   <div class="row">
-    <div class="col-xs-12 col-md-6 col-md-offset-3">
+   <div class="card">
+    <div class="card-body">
         <%= simple_form_for @artist do |f| %>
           <div class="label">Name</div>
           <div class="typo"> <%= f.input :name, label: false %> </div>
@@ -11,6 +12,8 @@
           <div class="typo"> <%= f.input :genre, label: false %> </div>
           <div class="label">Price</div>
           <div class="typo"> <%= f.input :price, label: false %> </div>
+          <div class="label">Photo URL</div>
+          <div class="typo"> <%= f.input :photo, label: false %> </div>
           <%= f.submit "Submit", class: "btn btn-info" %>
         <% end %>
         <div class="pad20">
