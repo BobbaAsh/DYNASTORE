@@ -1,19 +1,26 @@
 class ReservationsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
+    @reservations = policy_scope(Reservation).order(created_at: :desc)
     @reservations = current_user.reservations
   end
 
   def new
+
     @reservation = Reservation.new
+    authorize @reservation
   end
 
   def show
     @reservation = Reservation.find(params[:id])
+    authorize @reservation
   end
 
   def create
     @artist = Artist.find(params[:artist_id])
     @reservation = current_user.reservations.build(reservation_params)
+    authorize @reservation
     @reservation.artist = @artist
 
     if @reservation.save
@@ -25,15 +32,19 @@ class ReservationsController < ApplicationController
 
   def edit
     @reservation = Reservation.find(params[:id])
+    authorize @reservation
   end
 
   def update
     @reservation = Reservation.find(params[:id])
+    authorize @reservation
     @reservation.update(reservation_params)
     redirect_to @reservation
   end
 
   def delete
+    @reservation = Reservation.find(params[:id])
+    authorize @reservation
     @reservation.destroy
     redirect_to reservation_url, notice: 'Your reservation was successfully destroyed !'
   end

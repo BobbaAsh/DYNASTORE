@@ -11,6 +11,8 @@ class ArtistsController < ApplicationController
 
   def show
     authorize @artist
+    @reservation = Reservation.new
+
   end
 
   def new
