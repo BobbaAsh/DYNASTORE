@@ -1,6 +1,7 @@
 class ArtistsController < ApplicationController
   before_action :authenticate_user!, :set_artist, only: [:show]
   def index
+    @artists = policy_scope(Artist).order(created_at: :desc)
     @artists = Artist.all
   end
 
@@ -9,11 +10,13 @@ class ArtistsController < ApplicationController
 
   def new
     @artist = Artist.new
+    authorize @artist
   end
 
   def create
     @artist = Artist.new(artist_params)
     @artist.user = current_user
+    authorize @artist
     if @artist.save
       redirect_to artist_path(@artist)
     else

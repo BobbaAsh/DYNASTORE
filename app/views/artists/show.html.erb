@@ -38,6 +38,12 @@
 </div>
 </div>
 
+<%# @artists.each do |artist| %>
+  <%# if policy(artist).edit? %>
+    <%# link_to "Update", edit_artist_path(artist) %>
+  <%# end %>
+<%# end %>
+
 <div class="row">
   <%= link_to "Back", artists_path, class: "btn btn-info" %>
 </div>
