@@ -2,7 +2,7 @@
 <ul>
   <% @reservations.each do |reservation|%>
     <li><%= reservation.status %></li>
-    <%= link_to "Modify", edit_reservation_path(reservation) %>
+    <%= link_to "Cancel", reservation_path(reservation), method: :delete%>
   <% end %>
 </ul>
 <%= link_to "back", root_path %>
