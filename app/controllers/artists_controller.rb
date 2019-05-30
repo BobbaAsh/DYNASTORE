@@ -26,12 +26,14 @@ class ArtistsController < ApplicationController
 
   def update
     @artist = Artist.find(params[:id])
+    authorize @artist
     @artist.update(artist_params)
     redirect_to @artist
   end
 
   def edit
     @artist = Artist.find(params[:id])
+    authorize @artist
   end
 
   private
