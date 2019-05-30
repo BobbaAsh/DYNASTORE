@@ -7,6 +7,7 @@ class ArtistsController < ApplicationController
   end
 
   def show
+    authorize @artist
     @reservation = Reservation.new
   end
 
