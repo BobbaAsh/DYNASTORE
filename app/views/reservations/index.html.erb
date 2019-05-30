@@ -1,9 +1,11 @@
 <h1>Your Reservations !</h1>
 <ul>
   <% @reservations.each do |reservation|%>
-  <li><%= reservation.status %></li>
+    <li><%= reservation.status %></li>
+    <%= link_to "Modify", edit_reservation_path(reservation) %>
   <% end %>
 </ul>
 <%= link_to "back", root_path %>
-<%= link_to "Create", reservations_new_path %>
+
+
 
