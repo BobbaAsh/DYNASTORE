@@ -17,8 +17,9 @@
         <li class="nav-item dropdown">
           <%= image_tag "https://yt3.ggpht.com/a/AGF-l7-rVetPGjcLyjbNzyM6LDZbpOviYR6QIzBTnw=s900-mo-c-c0xffffffff-rj-k-no", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Add artist", new_artist_path , class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path , method: :delete, class: "dropdown-item" %>
+            <%= link_to "Ajouter un artiste", new_artist_path , class: "dropdown-item" %>
+            <%= link_to "Mes réservations", reservations_path , class: "dropdown-item" %>
+            <%= link_to "Déconnexion", destroy_user_session_path , method: :delete, class: "dropdown-item" %>
           </div>
         </li>
       </ul>
