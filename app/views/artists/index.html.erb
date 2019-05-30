@@ -19,10 +19,13 @@
             </div>
           <% end %>
       </div>
+    </div>
+    <% end %>
   </div>
 </div>
-
-<%# if policy(Artist).create? %>
-  <%# link_to "Add an artist", new_artist_path %>
-<%# end %>
-
+</div>
+<div class="artist-text-center">
+<% if policy(Artist).create? %>
+<%= link_to "Add an artist", new_artist_path, class: "btn btn-info" %>
+<% end %>
+</div>
