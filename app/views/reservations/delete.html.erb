@@ -1,2 +1,3 @@
-<h1>Reservations#delete</h1>
-<p>Find me in app/views/reservations/delete.html.erb</p>
+<h1>Cancel a Reservation</h1>
+<%= link_to "+", reservations_path(reservation), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %>
+
