@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
   def index
-    @reservations = Reservation.all
+    @reservations = current_user.reservations
   end
 
   def new
@@ -12,9 +12,12 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.new(reservation_params)
+    @artist = Artist.find(params[:artist_id])
+    @reservation = current_user.reservations.build(reservation_params)
+    @reservation.artist = @artist
+
     if @reservation.save
-      redirect_to reservation_path(@reservation.id)
+      redirect_to reservation_path(@reservation)
     else
       render :new
     end
@@ -38,6 +41,6 @@ class ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:user).permit(:user_id, :begin_date, :end_date, :status)
+    params.require(:reservation).permit(:begin_date, :end_date)
   end
 end

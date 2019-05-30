@@ -1,6 +1,6 @@
 <h1>Your Reservation Details</h1>
 <%= @reservation.id%>
 <%= link_to 'back', reservations_path%>
-<%= link_to "Delete", reservations_delete_path %>
+<%= link_to "Delete", reservations_path, method: :delete %>
 
 
