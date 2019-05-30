@@ -38,6 +38,13 @@ class ArtistsController < ApplicationController
     authorize @artist
   end
 
+  def destroy
+    @artist = Artist.find(params[:id])
+    authorize @artist
+    @artist.destroy
+    redirect_to artists_path
+  end
+
   private
 
   def set_artist
