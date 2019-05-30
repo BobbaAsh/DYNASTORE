@@ -12,6 +12,7 @@ class ArtistsController < ApplicationController
   end
 
   def show
+    authorize @artist
   end
 
   def new
@@ -40,6 +41,13 @@ class ArtistsController < ApplicationController
   def edit
     @artist = Artist.find(params[:id])
     authorize @artist
+  end
+
+  def destroy
+    @artist = Artist.find(params[:id])
+    authorize @artist
+    @artist.destroy
+    redirect_to artists_path
   end
 
   private
