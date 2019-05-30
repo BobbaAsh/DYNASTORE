@@ -1,11 +1,6 @@
 class ArtistsController < ApplicationController
   before_action :authenticate_user!, :set_artist, only: [:show]
   def index
-    if params[:query].present?
-      @artists = Artist.where(name: params[:query])
-    else
-      @artists = Artist.all
-    end
     @artists = policy_scope(Artist).order(created_at: :desc)
   end
 
