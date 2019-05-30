@@ -1,7 +1,7 @@
 class Artist < ApplicationRecord
   belongs_to :user
   mount_uploader :photo, PhotoUploader
-  include PgSearch
+include PgSearch
   multisearchable against: [:name, :genre]
 end
 

@@ -8,7 +8,6 @@ class ArtistsController < ApplicationController
     end
 
     @artists = policy_scope(Artist).order(created_at: :desc)
-    @artists = Artist.all
   end
 
   def show
