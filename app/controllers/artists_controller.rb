@@ -1,12 +1,13 @@
 class ArtistsController < ApplicationController
   before_action :authenticate_user!, :set_artist, only: [:show]
+
   def index
     @artists = policy_scope(Artist).order(created_at: :desc)
     @artists = Artist.all
   end
 
   def show
-    authorize @artist
+    @reservation = Reservation.new
   end
 
   def new
