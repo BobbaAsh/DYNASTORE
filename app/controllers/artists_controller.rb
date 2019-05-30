@@ -1,7 +1,11 @@
 class ArtistsController < ApplicationController
   before_action :authenticate_user!, :set_artist, only: [:show]
   def index
-    @artists = Artist.all
+    if params[:query].present?
+      @artists = Artist.where(name: params[:query])
+    else
+      @artists = Artist.all
+    end
   end
 
   def show
