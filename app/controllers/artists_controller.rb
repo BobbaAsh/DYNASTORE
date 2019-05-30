@@ -6,7 +6,6 @@ class ArtistsController < ApplicationController
     else
       @artists = Artist.all
     end
-
     @artists = policy_scope(Artist).order(created_at: :desc)
   end
 
