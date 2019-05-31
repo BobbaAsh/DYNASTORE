@@ -1,10 +1,7 @@
 <div class="container">
   <h1 class="artist-text-center">Mes Artistes</h1>
-<ul>
-
-  <div class="col-lg-12 cards">
+<div class= "d-flex justify-content-around">
   <% @artists.each do |artist|%>
-
     <div class="card" style="width: 18rem;">
         <%= cl_image_tag artist.photo, :aspect_ratio=>"1:1", :crop=>"fill" %>
         <div class="card-body">
@@ -14,9 +11,8 @@
           <%= link_to "Détails", artist, class: "btn btn-info" %>
         </div>
      </div>
-    </div>
   <% end %>
-</ul>
+ </div>
 </div>
 
 <div class="text-center">
