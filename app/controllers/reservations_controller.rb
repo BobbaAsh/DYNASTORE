@@ -6,6 +6,10 @@ class ReservationsController < ApplicationController
     @reservations = current_user.reservations
   end
 
+  def manager_reservations
+    @reservations = current_user.manager_reservations
+  end
+
   def new
     @reservation = Reservation.new
     authorize @reservation
