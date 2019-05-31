@@ -1,4 +1,10 @@
 <div class="container pad20" style="width:60%; margin-top: 30px; margin-bottom: 30px;" >
+
+  <div class="row ">
+      <p class="text-underline"> <%= cl_image_tag @artist.photo, :aspect_ratio=>"1:1", :crop=>"fill"%>
+    </div>
+    <div class="col-lg-8 text-center" style="margin-top:50px">
+      <h1><%= @artist.name %> </h1>
   <div class="row">
     <div>
       <div class="text-center col-lg-12">
@@ -12,6 +18,7 @@
           <p class="text-underline"> <%= "Description: #{@artist.description}" %> </p>
         </div>
       </div>
+
     </div>
   </div>
   <div class="row">
