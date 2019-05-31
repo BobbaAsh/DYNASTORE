@@ -8,21 +8,27 @@
 
 .home-card {
     width: 200px;
-    border-radius: 3px;
-    box-shadow: 0 0 2px rgb(230,230,230);
+    border-radius: 1px;
     text-align: center;
     padding: 20px;
-    border: 3px solid #b2eaff;
-    background-color: white;
-    margin-top: 70px;
-}
-
-.home-card img {
-    height: 60px;
-    margin-bottom: 20px;
+    border: 2px solid #c6ba95;
+    margin-top: 120px;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
 }
 
 .home-card p {
-    opacity: .5;
     margin-top: 30px;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
 }
+
+.home-card h4 {
+    margin-top: 30px;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+}
+
