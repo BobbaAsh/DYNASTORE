@@ -1,29 +1,33 @@
 .artist-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 30px;
-    margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 30px;
 
 }
 
 .artist-text-center {
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'Roboto Slab', serif;
   text-align: center;
   padding: 20px;
+  color: #373738;
+  font-weight: 700;
 }
 
 .artist-card-body {
-    width: 500px;
-    border-radius: 3px;
-    box-shadow: 0 0 5px rgb(230,230,230);
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #b2eaff;
-    margin-bottom: 50px;
+  width: 500px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #b2eaff;
+  margin-bottom: 50px;
 }
 
 .artist-card-body .typo {
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'Roboto Slab', serif;
+  color: #373738;
+  font-weight: 700;
 }
 
