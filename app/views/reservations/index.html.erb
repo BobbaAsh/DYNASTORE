@@ -4,10 +4,13 @@
     <div class="card-product">
       <div class="card-product-infos">
         <h2><%= reservation.artist.name %></h2>
-        <p>From <%= reservation.begin_date %> to <%= reservation.end_date %> </p>
-        <p>Prix: <%= reservation.final_price %>€ </p>
-        <p> <%= link_to "Modify", edit_reservation_path(reservation), class: "btn btn-info" %></p>
-        <p> <%= link_to "Cancel", reservation_path(reservation), method: :delete, class: "btn btn-info" %></p> 
+        <p><em>Du</em> <%= reservation.begin_date %> <em>au</em> <%= reservation.end_date %> </p>
+        <p>Prix: <%= reservation.artist.price %>€ </p>
+        <div class="bouton_reservation col-lg-12">
+          <p class="bouton"> <%= link_to "Détail", reservation_path(reservation), class: "btn btn-info" %></p>
+          <p class="bouton"> <%= link_to "Modifier", edit_reservation_path(reservation), class: "btn btn-info" %></p>
+          <p class="bouton"> <%= link_to "Annuler", reservation_path(reservation), method: :delete, class: "btn btn-info" %></p>
+        </div>
       </div>
     </div>
   <% end %>

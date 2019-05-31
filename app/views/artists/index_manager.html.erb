@@ -1,13 +1,20 @@
 <div class="container">
   <h1 class="artist-text-center">Mes Artistes</h1>
-<ul>
-  <% @artists.each do |artist|%>
-    <li><%= artist.name %></li>
-    <li><%= artist.photo %></li>
-
-  <% end %>
-</ul>
+    <div class="col-lg-12 cards">
+    <% @artists.each do |artist| %>
+      <div class="card" style="width: 18rem;">
+       <%= cl_image_tag artist.photo %>
+        <div class="card-body">
+          <h2 class="card-text"> <%= artist.name %></h2>
+          <p class="card-text"> <%= artist.genre %></p>
+          <h3 class="card-text"> <%= artist.price %> €</h3>
+          <%= link_to "Details", artist_path(artist), class: "btn btn-info" %>
+        </div>
+      </div>
+    <% end %>
 </div>
+
+
 
 <div class="text-center">
 <%= link_to "Retour", root_path, class: "btn btn-info" %>
