@@ -1,11 +1,15 @@
-<h1>Your Reservations !</h1>
+<div class="container">
+  <h1 class="artist-text-center">Mes réservations</h1>
 <ul>
   <% @reservations.each do |reservation|%>
     <li><%= reservation.status %></li>
-    <%= link_to "Modify", edit_reservation_path(reservation) %>
+    <%= link_to "Cancel", reservation_path(reservation), method: :delete%>
   <% end %>
 </ul>
-<%= link_to "back", root_path %>
+</div>
 
+<div class="text-center">
+<%= link_to "Retour", root_path, class: "btn btn-info" %>
+</div>
 
 

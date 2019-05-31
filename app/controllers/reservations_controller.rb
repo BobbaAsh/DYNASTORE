@@ -7,7 +7,6 @@ class ReservationsController < ApplicationController
   end
 
   def new
-
     @reservation = Reservation.new
     authorize @reservation
   end
@@ -42,11 +41,11 @@ class ReservationsController < ApplicationController
     redirect_to @reservation
   end
 
-  def delete
+  def destroy
     @reservation = Reservation.find(params[:id])
     authorize @reservation
     @reservation.destroy
-    redirect_to reservation_url, notice: 'Your reservation was successfully destroyed !'
+    redirect_to reservations_path, notice: 'Your reservation was successfully destroyed !'
   end
 
   private
