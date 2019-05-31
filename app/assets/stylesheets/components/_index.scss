@@ -12,6 +12,13 @@
 
 .text-center h1 {
   font-family: 'Roboto Slab', serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.artist-text-center {
+  font-family: 'Roboto Slab', serif;
   letter-spacing: 2px;
   color: #373738;
   font-weight: 700;
@@ -31,6 +38,7 @@
   display: flex;
   background-color: white;
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .typo {
