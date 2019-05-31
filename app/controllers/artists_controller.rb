@@ -1,9 +1,18 @@
 class ArtistsController < ApplicationController
   before_action :authenticate_user!, :set_artist, only: [:show]
+  skip_after_action :verify_authorized, only: :index_manager
 
   def index
-    @artists = policy_scope(Artist).order(created_at: :desc)
-    @artists = Artist.all
+    if params[:query].present?
+      @artists = policy_scope(Artist).search_by_name_and_genre(params[:query]).order(created_at: :desc)
+    else
+      @artists = Artist.all
+      @artists = policy_scope(Artist).order(created_at: :desc)
+    end
+  end
+
+  def index_manager
+    @artists = current_user.artists
   end
 
   def show
