@@ -1,16 +1,13 @@
 <div class="container padded">
-  <h1 class="artist-text-center">Modify your reservation</h1>
+  <h1 class="artist-text-center">Modifiez votre réservation</h1>
     <div class="row">
       <div class="col-lg-6 artist-cards">
         <div class="artist-card-body">
           <%= simple_form_for @reservation do |f| %>
-            <div class="label">Dates</div>
-            <div class="typo"> <%= f.input :begin_date, placeholder: "date" %> </div>
-            <div class="typo"> <%= f.input :end_date, placeholder: "date" %> </div>
-            <div class="label">Artist</div>
-            <div class="typo"> <%= f.input :artist_id, placeholder: "artist name" %> </div>
-            <div class="label">Price</div>
-            <div class="typo"><%= f.input :final_price, placeholder: "final price" %>
+            <div class="typo"> <%= f.input :begin_date %> </div>
+            <div class="typo"> <%= f.input :end_date %> </div>
+            <div class="typo"> <%= f.input :artist_id %> </div>
+            <div class="typo"><%= f.input :final_price %>
             <%= f.submit "Submit", class: "btn btn-info" %>
           <% end %>
           <div class="pad20">

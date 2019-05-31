@@ -1,15 +1,17 @@
 <div class="container">
   <h1 class="artist-text-center">Mes réservations</h1>
-<ul>
   <% @reservations.each do |reservation|%>
-    <li><%= reservation.status %></li>
-    <%= link_to "Modify", edit_reservation_path(reservation), class: "btn btn-info" %>
+    <div class="card-product">
+      <div class="card-product-infos">
+        <h2><%= reservation.artist.name %></h2>
+        <p>From <%= reservation.begin_date %> to <%= reservation.end_date %> </p>
+        <p>Prix: <%= reservation.final_price %>€ </p>
+        <p> <%= link_to "Modify", edit_reservation_path(reservation), class: "btn btn-info" %></p>
+      </div>
+    </div>
   <% end %>
-</ul>
 </div>
 
 <div class="text-center">
 <%= link_to "Retour", root_path, class: "btn btn-info" %>
 </div>
-
-

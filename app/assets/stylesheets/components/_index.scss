@@ -9,6 +9,7 @@
 @import "card";
 @import "artist-card";
 @import "search-bar";
+@import "card-product";
 
 .text-center h1 {
   font-family: 'Roboto Slab', serif;
@@ -42,7 +43,7 @@
 
 .typo {
   font-family: 'Roboto Slab', serif;
-  letter-spacing: 10px;
+  letter-spacing: 1px;
   color: #373738;
   font-weight: 700;
 }
