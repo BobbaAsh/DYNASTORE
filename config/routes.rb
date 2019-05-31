@@ -1,9 +1,18 @@
 Rails.application.routes.draw do
- devise_for :users
- root to: 'pages#home'
-  resources :artists do
-    resources :reservations, only: [:new, :create]
- end
+  devise_for :users
+  root to: 'pages#home'
 
- resources :reservations, only: [:index, :show, :edit, :update, :delete]
+  resources :artists do
+    collection do
+      get :index_manager
+    end
+
+    resources :reservations, only: [:new, :create]
+  end
+
+  resources :reservations, only: [:index, :show, :edit, :update, :destroy] do
+    collection do
+      get :manager_reservations
+    end
+  end
 end

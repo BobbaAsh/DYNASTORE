@@ -9,11 +9,11 @@
 
 .card {
   width: 200px;
-  border-radius: 3px;
+  border-radius: 1px;
   box-shadow: 0 0 5px rgb(230,230,230);
   text-align: center;
   padding: 20px;
-  border: 1px solid #c6ba95;
+  border: 2px solid #c6ba95;
   margin-bottom: 50px;
 }
 
@@ -28,7 +28,6 @@
   opacity: .5;
   margin-top: 30px;
 }
-
 
 .card h2 {
   font-weight: bold;
