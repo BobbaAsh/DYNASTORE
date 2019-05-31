@@ -4,7 +4,8 @@
       <h1 class="artist-text-center">Réservation <%= @reservation.artist.name %></h1>
       <p class="text-center"> <%= "Du: #{@reservation.begin_date}" %> </p>
       <p class="text-center"> <%= "Au: #{@reservation.end_date}" %> </p>
-      <p class="text-center"> <%= "Prix: #{@reservation.final_price}€" %> </p>
+      <p class="text-center"> <%= "Prix: #{@reservation.artist.price}€" %> </p>
+      <p class="text-center"> <%= link_to "Delete", reservations_path, method: :delete, class: "btn btn-info" %> </p>
     </div>
   </div>
 </div>
