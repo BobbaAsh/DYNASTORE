@@ -1,0 +1,15 @@
+<div class="container">
+  <h1 class="artist-text-center">Réservations de mes artistes</h1>
+<ul>
+  <% @reservations.each do |reservation|%>
+    <li><%= reservation.status %></li>
+    <%= reservation.user.email %>
+    <%= reservation.artist.name %>
+    <%= link_to "Cancel", reservation_path(reservation), method: :delete%>
+  <% end %>
+</ul>
+</div>
+
+<div class="text-center">
+<%= link_to "Retour", root_path, class: "btn btn-info" %>
+</div>

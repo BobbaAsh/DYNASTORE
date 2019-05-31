@@ -7,12 +7,12 @@ Rails.application.routes.draw do
       get :index_manager
     end
 
-    resources :reservations, only: [:new, :create]
+  resources :reservations, only: [:new, :create]
   end
 
   resources :reservations, only: [:index, :show, :edit, :update, :destroy] do
     collection do
-      get :manager_reservations
+      get :index_manager
     end
   end
 end
