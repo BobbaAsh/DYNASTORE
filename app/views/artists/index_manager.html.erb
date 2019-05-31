@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class="artist-text-center">Mes Artistes</h1>
+<ul>
+  <% @artists.each do |artist|%>
+    <li><%= artist.name %></li>
+    <li><%= artist.photo %></li>
+
+  <% end %>
+</ul>
+</div>
+
+<div class="text-center">
+<%= link_to "Retour", root_path, class: "btn btn-info" %>
+</div>
