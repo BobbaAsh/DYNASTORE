@@ -1,11 +1,11 @@
 .card-product {
   overflow: hidden;
-  height: 140px;
+  height: 190px;
   background: white;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 10px;
   border-radius: 1px;
   border: 1px solid #c6ba95;
 }
@@ -22,6 +22,7 @@
 
 .card-product p {
   font-size: 12px;
+  font-weight: bold;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -29,5 +30,15 @@
 }
 
 .card-product .card-product-infos {
-  padding: 16px;
+  padding: 20px;
+}
+
+.bouton_reservation {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.bouton {
+  margin-right: 30px;
 }
