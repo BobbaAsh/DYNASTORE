@@ -6,8 +6,9 @@ class ReservationsController < ApplicationController
     @reservations = current_user.reservations
   end
 
-  def manager_reservations
+  def index_manager
     @reservations = current_user.manager_reservations
+    authorize @reservations.first
   end
 
   def new
@@ -52,9 +53,11 @@ class ReservationsController < ApplicationController
     redirect_to reservations_path, notice: 'Your reservation was successfully destroyed !'
   end
 
+
   private
 
   def reservation_params
     params.require(:reservation).permit(:begin_date, :end_date)
   end
+
 end
